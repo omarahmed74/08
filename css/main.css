@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(to left , black , #333 , #666);
+}
+
+.Header h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Header {
+    width: 50%;
+    margin: auto;
+    border-bottom: 5px solid black;
+    border-radius: 20px;
+}
+
+.Header h1::before {
+    content: "";
+    width: 20%;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+}
+
+.Header h1::after {
+    content: "";
+    width: 20%;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+}
+
+.row {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile {
+    width: 30%;
+    height: 300px;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+.profile img {
+    width: 100%;
+    height: 100%;
+}
+
+.caption {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: all 1s;
+    position: absolute;
+    top: 100%;
+    right: 100%;
+}
+
+.socialLinks {
+    width: 100%;
+    background-color: rgba(206, 29, 29, 0.4);
+    position: absolute;
+    top: 100%;
+    transition: all 1s;
+    transition-delay: 1s;
+}
+
+.profile:hover .socialLinks {
+    top: 80%;
+}
+
+.profile:hover .caption {
+    top: 0%;
+    right: 0%;
+    transform: rotate(360deg);
+}
+
+
+.caption h1 {
+  padding: 15px 0px;
+}
+
+.caption p {
+    padding: 0px 20px;
+  }
+
+.caption a {
+    color: white;
+}
+
+.caption i {
+    font-size: 25px;
+    margin: 10px;
+}
+
+@media (max-width: 750px){
+    .row{
+        display: block;
+    }
+
+    .profile {
+        width: 80%;
+        margin: 25px 38px;
+        
+    }
+    
+    .Header h1 {
+        font-size: 32px;
+        margin-top: 50px;
+    }
+
+    .Header h1::before {
+        content: "";
+        width: 20%;
+        height: 5px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: -40px;
+    }
+    
+    .Header h1::after {
+        content: "";
+        width: 20%;
+        height: 5px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        right: -40px;
+    }
+
+    .Header {
+        width: 60%;
+        margin: auto;
+        border-bottom: 5px solid black;
+        border-radius: 20px;
+        padding: 10px 35px ;
+    }
+}
